@@ -109,6 +109,22 @@ public class PedidoBoloAlg {
                 break;
             case 12:
                 recheio = "Mousse de Chocolate com pedaços de chocolate ao leite ou amargo";
+                if (escolhaRecheio == 12) {
+                    System.out.printf("\nRecheio escolhido: %s\n\n", recheio);
+                    System.out.println("Será com pedaços de chocolate ao (1)leite ou (2)amargo? 1/2");
+                    System.out.print("Sua resposta: ");
+                    confirm = input.nextInt();
+                    if (confirm == 1) {
+                        recheio = "Mousse de de chocolate com pedaços de Chocolate ao Leite";
+                    } else if (confirm == 2) {
+                        recheio = "Mousse de de chocolate com pedaços de Chocolate Amargo";
+                    }
+                    while (confirm > 2) {
+                        System.out.println("Código inválido! Escreva novamente.");
+                        confirm = input.nextInt();
+                    }
+
+                }
                 break;
             case 13:
                 recheio = "Mousse de Chocolate com pedaços de morango";
@@ -320,6 +336,4 @@ public class PedidoBoloAlg {
 
         }
 
-
     }
-
